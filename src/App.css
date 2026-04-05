@@ -1,0 +1,112 @@
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.nav-container {
+  background: var(--card-bg);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  width: fit-content;
+}
+
+.quote-card {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  max-width: 25rem;
+  text-align: center;
+  border-top: 5px solid var(--primary);
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+.quote-card:hover{
+    transform: translateY(5px);
+    box-shadow: 0 5px 10px var(--primary-hover);
+}
+.quote-card h1 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.quote-card h2 {
+  font-size: 0.9rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+.loading-blur {
+    opacity: 0.7;
+    pointer-events: none;
+    filter: blur(1px);
+    transition: all 0.3s ease;
+}
+.display-div {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.display-div li {
+  background: var(--card-bg);
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-left: 4px solid var(--primary);
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+.display-div li:hover{
+    transform: translateY(5px);
+    box-shadow: 0 5px 10px var(--primary-hover);
+}
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+h1 {
+  color: var(--text-muted);
+  font-weight: 300;
+}
