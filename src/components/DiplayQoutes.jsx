@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router-dom";
 
 function DiplayQoutes() {
+    const navigate=useNavigate()
     let indexes=localStorage.getItem('liked');
     let data=localStorage.getItem('likedQuotes');
     indexes=indexes?JSON.parse(indexes):[];
@@ -8,7 +10,7 @@ function DiplayQoutes() {
       console.log("handleClear")
         if (window.confirm("Are you sure you want to clear all liked quotes?")) {
             localStorage.clear();
-            window.location.reload(); 
+            navigate(0);
         }
     }
   return (
